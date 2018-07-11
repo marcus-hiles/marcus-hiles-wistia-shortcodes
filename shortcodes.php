@@ -48,7 +48,7 @@ class Marcus_Hiles_Wistia_Embeds_Shortcode {
         );
 
          // Get video
-        $output = new Marcus_Hiles_Wistia_Embeds_Video( $video_atts );
+        $output = new MH_Wistia_Video( $video_atts );
 
         // Return video
         if ( is_object( $output ) )
