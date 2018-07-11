@@ -1,6 +1,6 @@
 <?php 
 
-class Marcus_Hiles_Wistia_Embeds_Video {
+class MH_Wistia_Video {
 
     public $atts;
     public $video_output;
