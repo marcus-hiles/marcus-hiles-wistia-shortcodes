@@ -71,7 +71,6 @@ class MH_Wistia_Video {
         }else{
          return str_replace( 'src', 'async src', $tag );            
         }
-
     }
 
 
@@ -88,7 +87,6 @@ class MH_Wistia_Video {
         }else{
             self::output_video_to_string();
         }
-
     }
 
 
