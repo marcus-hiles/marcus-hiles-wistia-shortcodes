@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Marcus Hiles Wistia Shortcodes
-Plugin URI: https://www.marcus-hiles.com/plugins
+Plugin URI: https://github.com/marcus-hiles
 Description: Easy embeds for Wistia Videos
 Version: 1.0.1
 Author: Marcus Hiles
