@@ -4,8 +4,6 @@
  *
  * Enqueue CSS/JS of all the blocks.
  *
- * @since 	1.0.0
- * @package CGB
  */
 
 // Exit if accessed directly.
@@ -13,21 +11,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-function learn_gutenberg_ex4_pre_existing_shortcode_init() {
+function marcus_hiles_wistia_shortcode_gblock_init() {
 	// Scripts.
 	wp_register_script(
 		'wistia-video-block-js', // Handle.
-		plugins_url( '/gutenberg/dist/blocks.build.js', dirname( __FILE__ ) ), // Block.build.js: We register the block here. Built with Webpack.
-		array( 'wp-blocks', 'wp-i18n', 'wp-element' ), // Dependencies, defined above.
-		filemtime( plugin_dir_path( __DIR__ ) . 'gutenberg/dist/blocks.build.js' ) // Version: filemtime — Gets file modification time.
+		plugins_url( '/gutenberg/dist/blocks.build.js', dirname( __FILE__ ) ), 
+		array( 'wp-blocks', 'wp-i18n', 'wp-element' ), 
+		filemtime( plugin_dir_path( __DIR__ ) . 'gutenberg/dist/blocks.build.js' ) 
 	);
 
 	// Styles.
 	wp_register_style(
-		'wistia-video-block-editor-css', // Handle.
-		plugins_url( '/gutenberg/dist/blocks.editor.build.css', dirname( __FILE__ ) ), // Block editor CSS.
-		array( 'wp-edit-blocks' ), // Dependency to include the CSS after it.
-		filemtime( plugin_dir_path( __DIR__ ) . 'gutenberg/dist/blocks.editor.build.css' ) // Version: filemtime — Gets file modification time.
+		'wistia-video-block-editor-css', 
+		plugins_url( '/gutenberg/dist/blocks.editor.build.css', dirname( __FILE__ ) ), 
+		array( 'wp-edit-blocks' ), 
+		filemtime( plugin_dir_path( __DIR__ ) . 'gutenberg/dist/blocks.editor.build.css' )
 	);
 
 
@@ -38,17 +36,17 @@ function learn_gutenberg_ex4_pre_existing_shortcode_init() {
 			array(
 				'editor_script'   => 'wistia-video-block-js',
 				'editor_style'    => 'wistia-video-block-editor-css',
-				'render_callback' => 'learn_gutenberg_ex4_pre_existing_shortcode_output',
+				'render_callback' => 'marcus_hiles_wistia_shortcode_gblock_output',
 			)
 		);
 	}
 }
 
-add_action( 'init', 'learn_gutenberg_ex4_pre_existing_shortcode_init' );
+add_action( 'init', 'marcus_hiles_wistia_shortcode_gblock_init' );
 
 
 
-function learn_gutenberg_ex4_pre_existing_shortcode_output( $atts = array() ) {
+function marcus_hiles_wistia_shortcode_gblock_output( $atts = array() ) {
 	
 
 
@@ -97,7 +95,6 @@ function learn_gutenberg_ex4_pre_existing_shortcode_output( $atts = array() ) {
 	return null;
 
 }
-//add_shortcode( 'child_pages', 'learn_gutenberg_ex4_pre_existing_shortcode_output' );
 
 
 
