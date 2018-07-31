@@ -1,10 +1,3 @@
-/**
- * BLOCK: single-block
- *
- * Registering a basic block with Gutenberg.
- * Simple block, renders and saves the same content without any interactivity.
- */
-
 import './style.scss';
 import './editor.scss';
 
@@ -157,24 +150,7 @@ registerBlockType( 'marcus-hiles-wistia-shortcodes/wistia-video-block', {
 	},
 	save: function( props ) {
 		const headline = props.attributes.headline;
-
 		
 		return null
-		// (
-			// <div class="inline-cta inline-cta-grey">
-			// 	<div id="inline-cta-inner">
-			// 	<p class="title">{ headline }</p>
-			// 	<p class="desc">{sub_headline}</p>
-			// 	<span class="border"></span>
-			// 	<p class="number"><span>Call Us</span> <a href="tel:800-985-1365">800-985-1365</a></p>
-			// 	<p class="or">or</p>
-			// 	<a class="button button-mobile-block" href="/contact-us/">{button_text}</a>
-			// 	</div>
-			// </div>
-			// <RichText.Content
-			// 	tagName="p"
-			// 	className={ props.className }
-			// 	value={ headline } />
-		//);
 	},
 } )
