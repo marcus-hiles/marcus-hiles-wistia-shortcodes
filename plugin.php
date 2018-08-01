@@ -8,7 +8,6 @@ Author: Marcus Hiles
 Author URI: https://www.marcus-hiles.com
 Text Domain: marcus-hiles-wistia-embeds
 Domain Path: /languages
-
 */
 
 if ( __FILE__ == $_SERVER['SCRIPT_FILENAME'] ) { exit; }
