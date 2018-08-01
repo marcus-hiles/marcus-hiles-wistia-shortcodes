@@ -48,8 +48,6 @@ add_action( 'init', 'marcus_hiles_wistia_shortcode_gblock_init' );
 
 function marcus_hiles_wistia_shortcode_gblock_output( $atts = array() ) {
 	
-
-
 	extract( shortcode_atts(
 		array(
 			'headline' => '',
@@ -93,12 +91,7 @@ function marcus_hiles_wistia_shortcode_gblock_output( $atts = array() ) {
 
 	// There was a problem
 	return null;
-
 }
-
-
-
-
 
 /**
  * Enqueue Gutenberg block assets for both frontend + backend.
