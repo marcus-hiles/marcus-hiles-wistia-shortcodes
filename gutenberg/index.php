@@ -43,9 +43,6 @@ function marcus_hiles_wistia_shortcode_gblock_init() {
 }
 
 add_action( 'init', 'marcus_hiles_wistia_shortcode_gblock_init' );
-
-
-
 function marcus_hiles_wistia_shortcode_gblock_output( $atts = array() ) {
 	
 	extract( shortcode_atts(
