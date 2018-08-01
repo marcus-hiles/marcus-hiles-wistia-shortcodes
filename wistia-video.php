@@ -36,8 +36,7 @@ class MH_Wistia_Video {
             add_action( 'wp_footer', array( $this, 'get_media_script' ), 0 );
             add_action( 'script_loader_tag', array( $this, 'async_script' ), 10, 2 );  
         }
-    }   
-
+    }
 
     public function maybe_add_ev1_scripts() {
         return ( wp_script_is( 'wistia_ev1', 'enqueued' ) );
@@ -54,7 +53,6 @@ class MH_Wistia_Video {
     public function get_media_script() {
         wp_enqueue_script( 'wistia_media_'.$this->atts['id'] , 'https://fast.wistia.com/embed/medias/'.$this->atts['id'].'.jsonp', null, null );
     }
-
 
     public function async_script( $tag, $handle ) {
 
@@ -73,7 +71,6 @@ class MH_Wistia_Video {
         }
     }
 
-
     public function output_video() {
 
         if( $this->atts['player'] === 'iframe' && $this->atts['embed_type'] !== 'popover' ){
@@ -88,7 +85,6 @@ class MH_Wistia_Video {
             self::output_video_to_string();
         }
     }
-
 
     public function output_video_to_string() {
         return (string) $this->video_output;
@@ -107,7 +103,6 @@ class MH_Wistia_Video {
 
         return $responsive_video;
     }
-
 
     public function build_video_default() {
 
