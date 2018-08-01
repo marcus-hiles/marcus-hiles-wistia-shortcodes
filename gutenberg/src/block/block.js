@@ -43,7 +43,6 @@ registerBlockType( 'marcus-hiles-wistia-shortcodes/wistia-video-block', {
 	icon: 'format-video', 
 	category: 'common', 
 	attributes: BlockAttributes,
-
 	allowed: {
 		html: false
 	},
@@ -145,7 +144,6 @@ registerBlockType( 'marcus-hiles-wistia-shortcodes/wistia-video-block', {
 				</div>
 			</div>
 			</Fragment>
-
 		);
 	},
 	save: function( props ) {
