@@ -4,13 +4,11 @@ class Marcus_Hiles_Wistia_Embeds_Shortcode {
 
     public $shortcode_tag = 'mh_wistia_embed';
  
-
     function __construct( $args = array() ){
 
         add_shortcode( $this->shortcode_tag, array( $this, 'shortcode_handler' ) );
     }
  
-
     function shortcode_handler($atts , $content = null){
 
         // Attributes
