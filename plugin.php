@@ -43,7 +43,6 @@ class Marcus_Hiles_Wistia_Embeds_Plugin {
 		require_once( trailingslashit( $this->dir_path ) . 'wistia-video.php' );
 		require_once( trailingslashit( $this->dir_path ) . 'shortcodes.php' );
 	}
-
 }
 endif;
 
