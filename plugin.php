@@ -28,7 +28,7 @@ class Marcus_Hiles_Wistia_Embeds_Plugin {
 			self::$instance = new Marcus_Hiles_Wistia_Embeds_Plugin;
 			self::$instance->init();
 		}
-	return self::$instance;
+		return self::$instance;
 	}
 
 
