@@ -19,7 +19,6 @@ class Marcus_Hiles_Wistia_Embeds_Plugin {
 	public $dir_path = '';
 	public $dir_url = '';
 
-
 	/**
 	 * Main Instance
 	 *
@@ -29,7 +28,7 @@ class Marcus_Hiles_Wistia_Embeds_Plugin {
 			self::$instance = new Marcus_Hiles_Wistia_Embeds_Plugin;
 			self::$instance->init();
 		}
-		return self::$instance;
+	return self::$instance;
 	}
 
 
