@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class MH_Wistia_Video {
 
@@ -22,21 +22,22 @@ class MH_Wistia_Video {
 
         if( $this->atts['id'] ){
             self::add_scripts();
-            self::output_video();        
+            self::output_video();
         }
     }
 
     public function add_scripts() {
         if( ! self::maybe_add_ev1_scripts() ){
             add_action( 'wp_footer', array( $this, 'get_ev1_script' ), 1 );
-            add_action( 'script_loader_tag', array( $this, 'async_script' ), 10, 2 );  
+            add_action( 'script_loader_tag', array( $this, 'async_script' ), 10, 2 );
         }
 
         if( ! self::maybe_add_media_scripts() ){
             add_action( 'wp_footer', array( $this, 'get_media_script' ), 0 );
-            add_action( 'script_loader_tag', array( $this, 'async_script' ), 10, 2 );  
+            add_action( 'script_loader_tag', array( $this, 'async_script' ), 10, 2 );
         }
     }
+
 
     public function maybe_add_ev1_scripts() {
         return ( wp_script_is( 'wistia_ev1', 'enqueued' ) );
@@ -54,6 +55,7 @@ class MH_Wistia_Video {
         wp_enqueue_script( 'wistia_media_'.$this->atts['id'] , 'https://fast.wistia.com/embed/medias/'.$this->atts['id'].'.jsonp', null, null );
     }
 
+
     public function async_script( $tag, $handle ) {
 
         if ( 'wistia_ev1' !== $handle && 'wistia_media_'.$this->atts['id'] !== $handle ){
@@ -65,11 +67,13 @@ class MH_Wistia_Video {
         }
 
         if ( 'wistia_ev1' === $handle ){
-         return str_replace( 'src', 'charset="ISO-8859-1" async src', $tag );  
+         return str_replace( 'src', 'charset="ISO-8859-1" async src', $tag );
         }else{
-         return str_replace( 'src', 'async src', $tag );            
+         return str_replace( 'src', 'async src', $tag );
         }
+
     }
+
 
     public function output_video() {
 
@@ -84,7 +88,9 @@ class MH_Wistia_Video {
         }else{
             self::output_video_to_string();
         }
+
     }
+
 
     public function output_video_to_string() {
         return (string) $this->video_output;
@@ -103,6 +109,7 @@ class MH_Wistia_Video {
 
         return $responsive_video;
     }
+
 
     public function build_video_default() {
 

@@ -3,6 +3,9 @@
  *
  * The create-guten-block CLI starts here.
  *
+ * TODO:
+ *  - checkRequiredFiles
+ *  - printBuildError
  */
 'use strict';
 

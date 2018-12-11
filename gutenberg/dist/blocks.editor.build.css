@@ -1,12 +1,1 @@
-/**
- * #.# Common SCSS
- *
- * Can include things like variables and mixins
- * that are used across the project.
-*/
-/**
- * #.# Editor Styles
- *
- * CSS for just Backend enqueued after style.scss
- * which makes it higher in priority.
- */
+div[data-type="marcus-hiles-wistia-shortcodes/wistia-video-block"] .editor-block-list__block-edit{-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}.mh-no-video-id{text-align:center}.mh-no-video-id .editor-rich-text{border-radius:6px;padding:8px 12px;border:1px solid #d0d0ff}
