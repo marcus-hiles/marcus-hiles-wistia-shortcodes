@@ -1,8 +1,8 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) )
+if ( ! defined( 'ABSPATH' ) ){
 	exit;
-
+}
 
 add_action( 'init', 'marcus_hiles_video_register_block' );
 function marcus_hiles_video_register_block() {
